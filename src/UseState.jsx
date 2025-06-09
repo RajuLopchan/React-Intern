@@ -1,30 +1,20 @@
-import React, { useState } from "react";
-
-const Button = React.memo(({ onClick }) => {
-  console.log("Button re-rendered");
-  return <button onClick={onClick}>Increase Count</button>;
-});
+import React, { useEffect, useState } from "react";
 
 function App() {
   const [count, setCount] = useState(0);
-  const [name, setName] = useState("");
 
-  const handleClick = () => {
-    console.log("Button clicked");
-    setCount((prev) => prev + 1);
-  };
+  function handleIncrement() {
+    setCount(count + 1);
+  }
+
+  useEffect(() => {
+    console.log("Component rendered");
+  });
 
   return (
     <div>
       <h2>Count: {count}</h2>
-      <Button onClick={handleClick} />
-
-      <input
-        type="text"
-        placeholder="Type your name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
+      <button onClick={handleIncrement}>Increment</button>
     </div>
   );
 }
