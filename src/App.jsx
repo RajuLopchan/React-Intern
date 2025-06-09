@@ -1,20 +1,20 @@
-import React, { useState, useMemo } from "react";
+import React from "react";
+import UseEffect from "./UseEffect";
+import UseCallback from "./UseCallback";
+import UseMemo from "./UseMemo";
+import UseRef from "./UseRef";
+import UseState from "./UseState";
 
-function UseMemoExample() {
-  const [count, setCount] = useState(0);
-
-  const doubleCount = useMemo(() => {
-    return count * 2;
-  }, [count]);
-
+function App() {
   return (
-    <div>
-      <h2>useMemo Example</h2>
-      <p>Count: {count}</p>
-      <p>Double: {doubleCount}</p>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-    </div>
+    <>
+      {/* <UseEffect /> */}
+      {/* <UseCallback /> */}
+      {/* <UseMemo /> */}
+      <UseRef />
+      {/* <UseState /> */}
+    </>
   );
 }
 
-export default UseMemoExample;
+export default App;
