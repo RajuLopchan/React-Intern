@@ -6,11 +6,11 @@ export const UserContext = createContext();
 function UserInformation({ children }) {
   // ✅ Set up state to hold user information
   const [userInfo, setUserInfo] = useState({
-    name: "Raju Lopchan",
-    age: 10,
-    address: "Kathmandu",
-    phone: "9800000000",
-    country: "Nepal",
+    name: "",
+    age: "",
+    address: "",
+    phone: "",
+    country: "",
   });
 
   // ✅ Provide the state and updater function to children components

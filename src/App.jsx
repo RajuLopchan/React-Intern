@@ -9,6 +9,7 @@ function App() {
     <div>
       <UserInformation>
         <h1>User Information</h1>
+        <div style={{ display: "flex", justifyContent:"space-between", gap: "20px" }}>
         <ComponentA />
         <br />
         <br />
@@ -16,6 +17,7 @@ function App() {
         <br />
         <br />
         <ComponentC />
+        </div>
       </UserInformation>
     </div>
   );
