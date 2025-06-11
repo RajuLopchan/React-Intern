@@ -21,15 +21,15 @@ const ComponentOne = () => {
 
   const handleSubmit = () => {
     setUserData((prev) => ({
-      ...prev,
-      ...Object.fromEntries(
-        Object.entries(localData).filter(([, v]) => v !== '')
-      ),
+      ...prev, ...localData //Old value overwritten with empty string
+      // ...Object.fromEntries(
+      //   Object.entries(localData).filter(([, v]) => v !== '')//[key, value]
+      // ),
     }));
-    setFormResetTrigger((prev) => prev + 1); // 🔁 trigger reset in all
+    setFormResetTrigger((prev) => prev + 1); 
   };
 
-  // 🔁 When formResetTrigger changes, reset local form inputs
+  //  When formResetTrigger changes, reset local form inputs
   useEffect(() => {
     setLocalData({
       name: '',

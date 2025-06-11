@@ -40,7 +40,7 @@ const ComponentOne = () => {
 
   return (
     <div>
-      <h3>Component Two</h3>
+      <h3>Component Three</h3>
       <input
         type="text"
         name="name"
