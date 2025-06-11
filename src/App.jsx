@@ -1,26 +1,17 @@
-import React from "react";
-import ComponentA from "./components/ComponentA";
-import ComponentB from "./components/ComponentB";
-import ComponentC from "./components/ComponentC";
-import UserInformation from "./UserInformation";
+import React from 'react';
+import { UserProvider } from './context/UserContext';
+import ComponentOne from './components/ComponentOne';
+import ComponentTwo from './components/ComponentTwo';
+import ComponentThree from './components/ComponentThree';
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <UserInformation>
-        <h1>User Information</h1>
-        <div style={{ display: "flex", justifyContent:"space-between", gap: "20px" }}>
-        <ComponentA />
-        <br />
-        <br />
-        <ComponentB />
-        <br />
-        <br />
-        <ComponentC />
-        </div>
-      </UserInformation>
-    </div>
+    <UserProvider>
+      <ComponentOne />
+      <ComponentTwo />
+      <ComponentThree />
+    </UserProvider>
   );
-}
+};
 
 export default App;
