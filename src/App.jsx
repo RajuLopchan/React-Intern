@@ -12,9 +12,9 @@ function App() {
       {/* <UseEffect /> */}
       {/* <UseCallback /> */}
       {/* <UseMemo /> */}
-      {/* <UseRef /> */}
+      <UseRef />
       {/* <UseState /> */}
-      <Operation />
+      {/* <Operation /> */}
     </>
   );
 }
