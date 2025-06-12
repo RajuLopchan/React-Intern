@@ -1,12 +1,11 @@
 import React from 'react';
-import useFetch from './Usefetch.jsx';
+import useFetch from './useFetch';
 
 function App() {
-  const url = 'https://fakestoreapi.com/products/1';
+  const { data, loading, error } = useFetch('https://fakestoreapi.com/products/1');
 
-  const data = useFetch(url);
-
-  if (!data) return <div>Loading...</div>;
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
 
   return (
     <div>
