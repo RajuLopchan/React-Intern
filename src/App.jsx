@@ -1,18 +1,24 @@
-
 import React from 'react';
-import { UserProvider } from './context/UserContext';
-import ComponentOne from './components/ComponentOne';
-import ComponentTwo from './components/ComponentTwo';
-import ComponentThree from './components/ComponentThree';
+import useFetch from './useFetch';
 
-const App = () => {
+function App() {
+  const { data, loading, error } = useFetch('https://fakestoreapi.com/products/1');
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+
   return (
-    <UserProvider>
-      <ComponentOne />
-      <ComponentTwo />
-      <ComponentThree />
-    </UserProvider>
+    <div>
+      <h1>Product Details</h1>
+      <p><strong>ID:</strong> {data.id}</p>
+      <p><strong>Title:</strong> {data.title}</p>
+      <p><strong>Price:</strong> ${data.price}</p>
+      <p><strong>Description:</strong> {data.description}</p>
+      <p><strong>Category:</strong> {data.category}</p>
+      <img src={data.image} alt={data.title} style={{ maxWidth: 200 }} />
+      <p><strong>Rating:</strong> {data.rating.rate} ({data.rating.count} reviews)</p>
+    </div>
   );
-};
+}
 
 export default App;
