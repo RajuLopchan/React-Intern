@@ -38,25 +38,40 @@
 // export default App;
 
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef} from 'react';
 
 function UseRef() {
-  const inputRef = useRef(null);// Create a ref to hold the input element(object)
+  const inputRef = useRef(null);// 
 
-    useEffect(() => {
-    inputRef.current.focus();
-  }, []);
+  //   useEffect(() => {
+  //   inputRef.current.focus();
+  // }, []);
   const handleFocus = () => {
     inputRef.current.focus(); // This sets focus to the input
   };
 
   return (
     <div>
+      <label htmlFor="name">Name:
       <input
-        type="text"
+        type="name"
         ref={inputRef}
-        placeholder="Enter text here"
+        placeholder="Enter name"
       />
+      </label>Password:
+      <label htmlFor="password">
+        <input
+        type="passeword"
+        placeholder="Enter password here"
+      />
+      </label>
+
+      Email:
+      <input
+        type="email"
+        placeholder="Enter email here"
+      />
+    
       <button onClick={handleFocus}>
         submit
       </button>
