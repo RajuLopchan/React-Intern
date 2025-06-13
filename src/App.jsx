@@ -1,22 +1,11 @@
-import React from "react";
-import UseEffect from "./UseEffect";
-import UseCallback from "./UseCallback";
-import UseMemo from "./UseMemo";
-import UseRef from "./UseRef";
-import UseState from "./UseState";
-import Operation from "./Operation";
-
+import React from 'react'
+import Debouncing from './Debouncing'
 function App() {
   return (
-    <>
-      {/* <UseEffect /> */}
-      {/* <UseCallback /> */}
-      {/* <UseMemo /> */}
-      <UseRef />
-      {/* <UseState /> */}
-      {/* <Operation /> */}
-    </>
-  );
+    <div>
+      <Debouncing />
+    </div>
+  )
 }
 
-export default App;
+export default App
