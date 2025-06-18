@@ -5,6 +5,7 @@ import UseMemo from "./UseMemo";
 import UseRef from "./UseRef";
 import UseState from "./UseState";
 import Operation from "./Operation";
+import UseReducer from "./UseReducer";
 
 function App() {
   return (
@@ -12,9 +13,10 @@ function App() {
       {/* <UseEffect /> */}
       {/* <UseCallback /> */}
       {/* <UseMemo /> */}
-      <UseRef />
+      {/* <UseRef /> */}
       {/* <UseState /> */}
       {/* <Operation /> */}
+      <UseReducer />
     </>
   );
 }
