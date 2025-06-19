@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useState } from "react"; //import useState from react
 function App() {
   const [count, setCount] = useState(0); //initialize the state with a number
