@@ -13,8 +13,12 @@ function App() {
       <Button label="Start Your Trading" bgColor="#ff6900" textColor="#fff"/><br />
       <Button label="Sign Up/Login" bgColor="#2c2f33" textColor="#fff"/><br />
       <Button label="Contact Us" bgColor="#7289da" textColor="#fff"/>
+      <Button label="About Us" bgColor="#7289da" textColor="#fff"/>
     </div>
   )
 }
+
+
+
 
 export default App
