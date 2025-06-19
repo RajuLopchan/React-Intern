@@ -1,27 +1,31 @@
-import React from 'react'
-import Button from './component/Button'
-import './App.css'
 
+import { useState } from "react"; //import useState from react
 function App() {
+  const [count, setCount] = useState(0); //initialize the state with a number
+  const [name, setname] = useState("ram"); //initialize the state with a string
+  const [myname, setName] = useState("raju");
   return (
-    <div className='image-container'>
-      <h1>Paper Trading without Any Risks</h1>
-      <div className="desc">
-        <p>Practice Building of your Trading Skills in stock, Crypto and Forex Without Any Risk</p>
-        <p>Get Started Today with $10000 virtual Money</p>
+    <>
+      <div>
+        <h1>{count}</h1>
+        <button onClick={() => setCount(count + 1)}>Increment</button>
       </div>
-      <Button label="Start Your Trading" bgColor="#ff6900" textColor="#fff"/><br />
-      <Button label="Sign Up/Login" bgColor="#2c2f33" textColor="#fff"/><br />
-      <Button label="Contact Us" bgColor="#7289da" textColor="#fff"/>
-    </div>
-  )
+      <br />
+      <div>
+        <h1>{name}</h1>
+        <button onClick={() => setname("shyam")}>Change Name</button>
+      </div>
+      <br />
+      <div>
+        <input
+          type="text"
+          value={myname}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <button onClick={() => setName("")}>Clear Name</button>
+      </div>
+    </>
+  );
 }
 
-
-
-
-
-
-
-
-export default App
+export default App;
